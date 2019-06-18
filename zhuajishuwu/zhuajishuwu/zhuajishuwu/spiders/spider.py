@@ -84,10 +84,10 @@ class Myspider(scrapy.Spider):
 		novelsize     	=      	contents[2].split('：')[1]
 		if 'KB' in novelsize:
 			novelsize	= 		float(re.split('KB',novelsize)[0])*1024
-		elif 'M':
-			novelsize	= 		float(re.split('M',novelsize)[0])*1024*1024
+		elif 'MB' in novelsize:
+			novelsize	= 		float(re.split('MB',novelsize)[0])*1024*1024
 		else:
-			novelsize	= 		float(re.split('M',novelsize)[0])
+			novelsize	= 		novelsize
 
 
 		novelstatus 	= 		'完结'
@@ -95,8 +95,8 @@ class Myspider(scrapy.Spider):
 		simplyintroduce = 		response.xpath('//*[@class="txt_description"]/p[1]/text()').extract_first()
 		simplyintroduce = 		simplyintroduce.strip()
 
-		txtdownload		=		'NULL'
-		zipdownload		=		'NULL'
+		txtdownload		=		'None'
+		zipdownload		=		'None'
 
 		# print(zhuajiItem['novelname'],zhuajiItem['author'],downloadNum,novelsize ,novelstatus)
 		# print(zhuajiItem['novelid'],zhuajiItem['imgurl'],zhuajiItem['noveltype'],zhuajiItem['novelurl'])
