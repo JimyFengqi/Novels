@@ -18,7 +18,7 @@ class Myspider(scrapy.Spider):
 	'chuanyue':'穿越小说','wangyou':'网游小说','kehuan':'科幻小说','qita':'其他小说'
 	}
 	listtypetest={'xuanhuan':'玄幻魔法'}
-	main_url = "https://www.bookben.net/"
+	main_url = "https://www.bookben.net"
 	shuku_url_base='https://www.bookben.net/%s/%s.html'
 
 	downloadpage_url_base='https://www.bookben.net/down/all/%s.txt'
