@@ -1,15 +1,16 @@
 # novel网站
 
-[炫书网书库](https://www.xuanquge.com/shuku.html)    
-[无限小说](http://www.555x.org/shuku.html)  
-[落吧书屋](http://www.txt81.com/shu/)  
-[八零电子书](https://www.80txt.com/sort/4500.html)  
-[选书网](https://www.xuanshu.com/soft/sort01/index_303.html)  
-[爪机网](https://www.zhuaji.org/shuku/)  
-[书丫丫](https://www.shuyaya.cc/quanben/)  
+[爱去小说网](https://www.27xs.cc/)			[下载代码](https://github.com/JimyFengqi/Novels/tree/master/aiqu/aiqu/aiqu）  
+[书本网](https://www.bookben.net/txt.html)			[下载代码](https://github.com/JimyFengqi/Novels/tree/master/bookben/bookben/bookben)   
+[落吧书屋](http://www.txt81.com/shu/)			[下载代码](https://github.com/JimyFengqi/Novels/tree/master/luoba/luoba/luoba)  
+[书丫丫](https://www.shuyaya.cc/quanben/)			[下载代码](https://github.com/JimyFengqi/Novels/tree/master/shuyaya/shuyaya/shuyaya）   
+[八零电子书](https://www.80txt.com/sort/4500.html)			[下载代码](https://github.com/JimyFengqi/Novels/tree/master/txt80/txt80)  
+[无限小说](http://www.555x.org/shuku.html)			[下载代码](https://github.com/JimyFengqi/Novels/tree/master/wuxian/wuxian/wuxian)  
+[炫书网书库](https://www.xuanquge.com/shuku.html)			[下载代码](https://github.com/JimyFengqi/Novels/tree/master/xuanshuwang/xuanshuwang/xuanshuwang)  
+[选书网](https://www.xuanshu.com/soft/sort01/index_303.html)			[下载代码](https://github.com/JimyFengqi/Novels/tree/master/xuanshuwang/xuanshuwang)  
+[爪机网](https://www.zhuaji.org/shuku/)			[下载代码](https://github.com/JimyFengqi/Novels/tree/master/zhuajishuwu/zhuajishuwu/zhuajishuwu)  
+
 [我爱读](https://www.woaidu.org/)  
-[爱去小说网](https://www.27xs.cc/)  
-[书本网](https://www.bookben.net/txt.html)  
 [奇书网](http://www.qishu.cc/yanqing/list10_1.html)  
 [下书网](https://www.xiashutxt.com/type/nan_0_2_allvisit_1.html)  
 [宅男小说网](http://www.zntxt.com/shuku/)  
