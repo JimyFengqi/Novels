@@ -57,10 +57,10 @@ class Myspider(scrapy.Spider):
 			novelsize	=	novelsize.split('大小：')[1].split('更新')[0].strip()
 			if 'KB' in novelsize:
 				novelsize= float(re.split('KB',novelsize)[0])*1024
-			elif 'MB':
+			elif 'MB' in novelsize :
 				novelsize= float(re.split('MB',novelsize)[0])*1024*1024
 			else:
-				novelsize= float(re.split('MB',novelsize)[0])
+				novelsize= novelsize
 
 			txtdownload	=	self.txt_base_url % (novelid)
 			zipdownload	=	self.zip_base_url % (novelid)
@@ -74,6 +74,7 @@ class Myspider(scrapy.Spider):
 			item['downloadNum']=downloadNum
 			item['novelurl']=novelurl
 			item['imgurl']=imgurl
+			item['novelstatus']= 'None'
 			item['novelid']=novelid
 			item['novelsize']=novelsize
 			item['noveltype']=noveltype

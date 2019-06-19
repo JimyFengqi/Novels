@@ -84,10 +84,10 @@ class Myspider(scrapy.Spider):
 		novelsize     	=      	contents[2].split('：')[1]
 		if 'KB' in novelsize:
 			novelsize	= 		float(re.split('KB',novelsize)[0])*1024
-		elif 'MB':
+		elif 'MB' in novelsize:
 			novelsize	= 		float(re.split('MB',novelsize)[0])*1024*1024
 		else:
-			novelsize	= 		float(re.split('MB',novelsize)[0])
+			novelsize	= 		novelsize
 
 
 		novelstatus 	= 		contents[5].split('：')[1]

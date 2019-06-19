@@ -14,6 +14,7 @@ class LuobaItem(scrapy.Item):
     novelid = scrapy.Field()
     noveltype = scrapy.Field()
     novelsize = scrapy.Field()
+    novelstatus = scrapy.Field()
     downloadNum = scrapy.Field()
     novelurl = scrapy.Field()
     imgurl=scrapy.Field()

@@ -50,10 +50,10 @@ class Myspider(scrapy.Spider):
 			novelsize	=	content.xpath('li[2]/text()').extract_first()
 			if 'KB' in novelsize:
 				novelsize= float(re.split('KB',novelsize)[0])*1024
-			elif 'MB':
+			elif 'MB' in novelsize:
 				novelsize= float(re.split('MB',novelsize)[0])*1024*1024
 			else:
-				novelsize= float(re.split('MB',novelsize)[0])
+				novelsize= novelsize
 
 			noveltype	=	content.xpath('li[7]/a/text()').extract_first()
 			txtdownload	=	self.txt_base_url % (novelid,novelname)
@@ -66,6 +66,7 @@ class Myspider(scrapy.Spider):
 
 			item['novelname']=novelname
 			item['author']=author
+			item['novelstatus']='None'
 			item['downloadNum']=downloadNum
 			item['novelurl']=novelurl
 			item['novelid']=novelid

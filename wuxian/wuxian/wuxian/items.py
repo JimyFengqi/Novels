@@ -17,6 +17,7 @@ class WuxianItem(scrapy.Item):
     noveltype = scrapy.Field()
     novelsize = scrapy.Field()
     downloadNum = scrapy.Field()
+    novelstatus = scrapy.Field()
     novelurl = scrapy.Field()
     imgurl=scrapy.Field()
     txtdownload=scrapy.Field()

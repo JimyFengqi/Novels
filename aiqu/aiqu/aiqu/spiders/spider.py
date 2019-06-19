@@ -90,12 +90,12 @@ class Myspider(scrapy.Spider):
 
 		if 'KB' in novelsize:
 			novelsize	= 		float(re.split(' KB',novelsize)[0])*1024
-		elif 'MB':
+		elif 'MB' in novelsize:
 			novelsize	= 		float(re.split(' MB',novelsize)[0])*1024*1024
 		else:
-			novelsize	= 		float(re.split(' B',novelsize)[0])
+			novelsize	= 		novelsize
 
-		print(novelsize)
+		#print(novelsize)
 
 		simplyintroduce = 		response.xpath('//*[@class="book-info"]/p[contains(@class,"book-intro")]').xpath('string(.)').extract_first()
 		simplyintroduce = 		simplyintroduce.strip() 

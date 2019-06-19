@@ -15,6 +15,7 @@ class XuanqugeItem(scrapy.Item):
     noveltype = scrapy.Field()
     novelsize = scrapy.Field()
     downloadNum = scrapy.Field()
+    novelstatus = scrapy.Field()
     novelurl = scrapy.Field()
     txtdownload=scrapy.Field()
     zipdownload=scrapy.Field()
