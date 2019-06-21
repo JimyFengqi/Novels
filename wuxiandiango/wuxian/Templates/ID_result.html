@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>小说信息页面</title>
+    </head>
+    <style type="text/css">
+    body{
+    background-color:#ccc;
+    margin:0;
+    padding:0;
+    text-align:center;
+    }
+    .button {
+        display: inline-block;
+        position: relative;
+        margin: 10px;
+        padding: 0 20px;
+        text-align: center;
+        text-decoration: none;
+        font: bold 12px/25px Arial, sans-serif;
+
+        text-shadow: 1px 1px 1px rgba(255,255,255, .22);
+
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        border-radius: 30px;
+
+        -webkit-box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
+        -moz-box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
+        box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
+
+        -webkit-transition: all 0.15s ease;
+        -moz-transition: all 0.15s ease;
+        -o-transition: all 0.15s ease;
+        -ms-transition: all 0.15s ease;
+        transition: all 0.15s ease;
+    }
+
+    .blue {
+        color: #19667d;
+
+        background: #70c9e3; /* Old browsers */
+        background: -moz-linear-gradient(top,  #70c9e3 0%, #39a0be 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#70c9e3), color-stop(100%,#39a0be)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #70c9e3 0%,#39a0be 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #70c9e3 0%,#39a0be 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #70c9e3 0%,#39a0be 100%); /* IE10+ */
+        background: linear-gradient(top,  #70c9e3 0%,#39a0be 100%); /* W3C */
+    }
+    .green {
+        color: #3e5706;
+
+        background: #a5cd4e; /* Old browsers */
+        background: -moz-linear-gradient(top,  #a5cd4e 0%, #6b8f1a 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a5cd4e), color-stop(100%,#6b8f1a)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #a5cd4e 0%,#6b8f1a 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #a5cd4e 0%,#6b8f1a 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #a5cd4e 0%,#6b8f1a 100%); /* IE10+ */
+        background: linear-gradient(top,  #a5cd4e 0%,#6b8f1a 100%); /* W3C */
+    }
+        /* Big Button Style */
+
+    .big {
+        padding: 0 40px;
+        padding-top: 20px;
+        height: 40px;
+        text-transform: uppercase;
+        font: bold 30px/25px Arial, sans-serif;
+    }
+    </style>
+    <body style="background-image:url('http://127.0.0.1:8000/media/upload/0.jpg');background-size: cover;">
+        <form action="" method="post">
+        {% csrf_token %}
+        {% for novel in novels%}
+            <h3 style="color: red;margin-left: -1000px"">【{{ novel.novelid }}】的搜索结果:</h3>
+            <table width='80%' align="center" border="1px" cellspacing="1px" bordercolor="#6699ff">
+                <caption>
+                    <h3>小说信息</h3>
+                </caption>
+                    <tr>
+                        <td rowspan="17"><img src="{{ novel.imgurl }}" border="0" title="小说详情"></td>
+                    </tr>
+                    <tr>
+                        <th>小说名字</th>
+                        <td>{{ novel.novelname }}</td>
+                    </tr>
+                    <tr>
+                        <th>作者</th>
+                        <td>{{ novel.author }}</td>
+                    </tr>
+                    <tr>
+                        <th width="50px">小说类型</th>
+                        <td>{{ novel.noveltype }}</td>
+                    </tr>
+                    <tr>
+                        <th width="50px">小说大小</th>
+                        <td>{{ novel.novelsize }}</td>
+                    </tr>
+                    <tr>
+                        <th width="50px">小说简介</th>
+                        <td>{{ novel.simplyintroduce }}</td>
+                    </tr>
+                    <tr>
+                        <th width="50px">下载次数</th>
+                        <td>{{novel.downloadnum}}</td>
+                    </tr>
+                    <tr>
+                        <th>txt下载链接</th>
+                        <td><a href="{{ novel.txtdownload }}" title = "点击进行下载"/>txt下载地址</td>
+                    </tr>
+                    <tr>
+                        <th>zip下载链接</th>
+                        <td><a href="{{ novel.zipdownload }}" title = "点击进行下载"/>zip下载地址</td>
+                    </tr>
+                    <tr>
+                        <th width="50px">小说源地址</th>
+                        <td><a href="{{ novel.novelurl }}" title="点击进行跳转"/> 点击进行跳转{{novel.novelurl}} </td>
+                    </tr>
+        </table>
+
+        {% endfor %}
+
+    </form>
+    <div class="button big blue" style="margin-right:23px;">
+        <a href="/home/IDsearch/">返回查询页面</a>
+    </div>
+    <div class="button big green" style="margin-top:23px;">
+        <a href="/home/">返回首页</a>
+    </div>
+    </body>
+</html>

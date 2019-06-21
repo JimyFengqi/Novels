@@ -23,7 +23,7 @@ class DbManager(object):
             create_novel_tableString = """
             CREATE TABLE IF NOT EXISTS %s(
             id integer NOT NULL PRIMARY KEY AUTOINCREMENT, 
-            "novelname" text NOT NULL, 
+            "novelname" text  unique NOT NULL, 
             "author" text NOT NULL, 
             "novelid" text NOT NULL, 
             "noveltype" text NOT NULL, 

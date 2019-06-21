@@ -58,7 +58,7 @@ class Sqlite3Pipeline(object):#创建一个新的类，用来做保存数据到�
         data = dict(item)#将item变成字典形式
         keys = ','.join(data.keys())#将字典的键值做成“，”隔开的字符串
         values = ','.join(['%s'] * len(data))#根据data字典的长度建立对应长度数的“%s”
-        sql = 'insert into %s(%s) values %s' %(self.tablename,keys,tuple(data.values()))
+        sql = 'insert  or ignore into %s(%s) values %s' %(self.tablename,keys,tuple(data.values()))
         #print(sql)
         self.cx.execute(sql)#执行sql语句
         self.conn.commit()#提交

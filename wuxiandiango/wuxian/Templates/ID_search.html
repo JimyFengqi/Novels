@@ -1,0 +1,208 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+      
+        <meta http-equiv="Content-Type" charset='utf-8'> 
+        <title>ID搜索页面</title>
+        <script>
+            function copyText()
+            {
+                var kw=document.getElementById("search_text").value;
+                var urlname = '/home/IDresult/?kw='+kw;
+                window.location.href=urlname
+            }
+            document.onkeydown = function(event_e){
+                    if(window.event) {
+                        event_e = window.event;
+                    }
+
+                    var int_keycode = event_e.charCode||event_e.keyCode;
+                    if( int_keycode == '13' ) {
+                        //your handler function,please.
+                        copyText();
+                        return false;
+                    }
+                }
+        </script>
+        <style type = "text/css">
+            body{
+            background-color:#ccc;
+            margin:0;
+            padding:0;
+            text-align:center;
+            }
+            .nav {
+                background: #232323;
+                height: 60px;
+                display: inline-block;
+            }
+            .nav li {
+                float: left;
+                list-style-type: none;
+                position: relative;
+            }
+            .nav li a {
+                font-size: 16px;
+                color: white;
+                display: block;
+                line-height: 60px;
+                padding: 0 26px;
+                text-decoration: none;
+                border-left: 1px solid #2e2e2e;
+                font-family: Montserrat, sans-serif;
+                text-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+            }
+            .nav li a:hover {
+                background-color: #2e2e2e;
+            }
+            #settings a {
+                padding: 18px;
+                height: 24px;
+                font-size: 10px;
+                line-height: 24px;
+            }
+            #search {
+                width: 357px;
+                margin: 4px;
+            }
+            #search_text{
+                width: 357px;
+                padding: 15px 0 15px 20px;
+                font-size: 16px;
+                font-family: Montserrat, sans-serif;
+                border: 0 none;
+                height: 52px;
+                margin-right: 0;
+                color: white;
+                outline: none;
+                background: #1f7f5c;
+                float: left;
+                box-sizing: border-box;
+                transition: all 0.15s;
+            }
+            ::-webkit-input-placeholder { /* WebKit browsers */
+                color: darkgray;
+            }
+            :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+                color: white;
+            }
+            ::-moz-placeholder { /* Mozilla Firefox 19+ */
+                color: white;
+            }
+            :-ms-input-placeholder { /* Internet Explorer 10+ */
+                color: white;
+            }
+            #search_text:focus {
+                background: rgb(64, 151, 119);
+            }
+            #search_button {
+                border: 0 none;
+                background: #1f7f5c url(search.png) center no-repeat;
+                width: 60px;
+                float: left;
+                padding: 0;
+                text-align: center;
+                height: 52px;
+                cursor: pointer;
+                }
+           #options a {
+                border-left: 0 none;
+            }
+            #options>a>{
+                background-image: url(triangle.png);
+                background-position: 85% center;
+                background-repeat: no-repeat;
+                padding-right: 42px;
+            }
+            .subnav {
+                visibility: hidden;
+                position: absolute;
+                top: 110%;
+                right: 0;
+                width: 200px;
+                height: auto;
+                opacity: 0;
+                transition: all 0.1s;
+                background: #232323;
+            }
+            .subnav li {
+                float: none;
+            }
+            .subnav li a {
+                border-bottom: 1px solid #2e2e2e;
+            }
+            #options:hover .subnav {
+                visibility: visible;
+                top: 100%;
+                opacity: 1;
+            }
+            .txtCenter{
+                text-align:center;
+            }
+
+            .button {
+                display: inline-block;
+                position: relative;
+                margin: 10px;
+                padding: 0 20px;
+                text-align: center;
+                text-decoration: none;
+                font: bold 12px/25px Arial, sans-serif;
+
+                text-shadow: 1px 1px 1px rgba(255,255,255, .22);
+
+                -webkit-border-radius: 30px;
+                -moz-border-radius: 30px;
+                border-radius: 30px;
+
+                -webkit-box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
+                -moz-box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
+                box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
+
+                -webkit-transition: all 0.15s ease;
+                -moz-transition: all 0.15s ease;
+                -o-transition: all 0.15s ease;
+                -ms-transition: all 0.15s ease;
+                transition: all 0.15s ease;
+            }
+
+            .blue {
+                color: #19667d;
+
+                background: #70c9e3; /* Old browsers */
+                background: -moz-linear-gradient(top,  #70c9e3 0%, #39a0be 100%); /* FF3.6+ */
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#70c9e3), color-stop(100%,#39a0be)); /* Chrome,Safari4+ */
+                background: -webkit-linear-gradient(top,  #70c9e3 0%,#39a0be 100%); /* Chrome10+,Safari5.1+ */
+                background: -o-linear-gradient(top,  #70c9e3 0%,#39a0be 100%); /* Opera 11.10+ */
+                background: -ms-linear-gradient(top,  #70c9e3 0%,#39a0be 100%); /* IE10+ */
+                background: linear-gradient(top,  #70c9e3 0%,#39a0be 100%); /* W3C */
+            }
+
+        </style> 
+        <body style="background-image:url('http://img1.imgtn.bdimg.com/it/u=1641239669,2780739600&fm=26&gp=0.jpg');background-size: cover;">    
+            <div align= center> 
+                <h1>Welcome to Jimy's Website!</h1> 
+                <h2>在这里开启你的小说之旅吧~~</h2> 
+                <ul class="nav"> 
+                    <form class = "txtCenter"  method="post" action="/home/IDresult/"> 
+                        <li id="search"> 
+                            <div id="some"> 
+                                <input  type="text" name="search_text" id="search_text"  maxlength="100" placeholder="请输入小说编号" autocomplete="off"/> 
+                                
+                            </div> 
+                        </li> 
+                       <li id="options">
+                            <a onclick="copyText()">我搜小说</a>
+                        </li>
+                        {% csrf_token %}
+                    </form> 
+                </ul> 
+            </div> 
+            {{error}}<br>
+            <div class="button blue" style="margin-top:23px;"> 
+                <a href="/home/">返回首页</a>
+            </div> 
+            <script src="prefixfree-1.0.7.js" type="text/javascript"></script> 
+        </body>
+    </head> 
+</html>
