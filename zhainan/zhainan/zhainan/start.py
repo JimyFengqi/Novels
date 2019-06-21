@@ -23,7 +23,7 @@ class DbManager(object):
             create_novel_tableString = """
             CREATE TABLE IF NOT EXISTS %s(
             id integer NOT NULL PRIMARY KEY AUTOINCREMENT, 
-            "novelname" text NOT NULL, 
+            "novelname" text unique NOT NULL, 
             "author" text NOT NULL, 
             "novelid" text NOT NULL, 
             "noveltype" text NOT NULL, 
@@ -41,6 +41,15 @@ class DbManager(object):
             self.cursor.execute(create_novel_tableString)
             self.db.commit()  
             print('DB file not exist, create a new.')
+    def insertData(self,item):
+        data = dict(item)#将item变成字典形式
+        keys = ','.join(data.keys())#将字典的键值做成“，”隔开的字符串
+        values = ','.join(['%s'] * len(data))#根据data字典的长度建立对应长度数的“%s”
+        sql = 'insert or ignore into %s(%s) values %s' %(self.tablename,keys,tuple(data.values()))
+        print(sql)
+        self.cursor.execute(sql)#执行sql语句
+        self.db.commit()#提交
+            
 
 a=DbManager()
 name = 'zhainan'  
