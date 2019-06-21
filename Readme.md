@@ -10,12 +10,12 @@
 [选书网](https://www.xuanshu.com/soft/sort01/index_303.html)			[下载代码](https://github.com/JimyFengqi/Novels/tree/master/xuanshuwang/xuanshuwang)  
 [爪机网](https://www.zhuaji.org/shuku/)			[下载代码](https://github.com/JimyFengqi/Novels/tree/master/zhuajishuwu/zhuajishuwu/zhuajishuwu)  
 [奇书网](http://www.qishu.cc/yanqing/list10_1.html) [下载代码](https://github.com/JimyFengqi/Novels/tree/master/qishuwang/qishuwang/qishuwang)  
+[宅男小说网](http://www.zntxt.com/shuku/)  [下载代码](https://github.com/JimyFengqi/Novels/tree/master/zhainan/zhainan/zhainan)  
+[棉花糖](https://www.mianhuatang2.com/lx/9/11.htm)  [下载代码](https://github.com/JimyFengqi/Novels/tree/master/mianhuatang/mianhuatang/mianhuatang)  
+[福利小说网](http://www.fltxt.com/xuanhuan/)  [下载代码](https://github.com/JimyFengqi/Novels/tree/master/fulitxt/fulitxt/fulitxt)  
 [我爱读](https://www.woaidu.org/)  
- 
 [下书网](https://www.xiashutxt.com/type/nan_0_2_allvisit_1.html)  
-[宅男小说网](http://www.zntxt.com/shuku/)  
-[棉花糖](https://www.mianhuatang2.com/lx/9/11.htm)  
-[福利小说网](http://www.fltxt.com/xuanhuan/)  
+
 [言情小说书库](http://www.fmxxs.com/)  
 [Txt小说下载网](https://www.xsjtxt.com/soft/1/Soft_001_1.html)  
 [当书网](https://www.downbook.net/TXT/list4_1.html)  
