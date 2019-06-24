@@ -19,7 +19,7 @@ class Myspider(scrapy.Spider):
 	shuku_url_base='http://www.fltxt.com/%s/index_%s.html'
 
 
-	listtype={'xuanhuan':'玄幻魔法','chuanyue':'穿越重生','wuxia':'武侠修真','jsli':'军事历史','youxi':'网游竞技',
+	listtype={'xuanhuan':'玄幻魔法','chuanyue':'穿越重生','wuxia':'武侠修真','jsls':'军事历史','youxi':'网游竞技',
 	'dushi':'都市言情','xiaoyuan':'热血校园', 	'kongbu':'恐怖灵异','kehuan':'科幻未来','xuanyi':'悬疑推理'
 	}
 
@@ -57,14 +57,14 @@ class Myspider(scrapy.Spider):
 			novelname   			=   content.xpath('a/text()').extract_first()
 			novelurl 	= 	self.main_url  +	content.xpath('a/@href').extract_first()
 			novelid 	= 	novelurl.split('.html')[0].split('/')[-1]
-			imgurl 		=	self.main_url + content.xpath('a/img/@src').extract_first()
-
+			imgurl 		=	content.xpath('a/img/@src').extract_first()
+			imgurl	    =   imgurl if 'http' in imgurl else  self.main_url + imgurl
 			item['novelname']=novelname
 			item['novelid']=novelid
 			item['novelurl']=novelurl
 			item['imgurl']=imgurl
 
-			yield Request(novelurl,self.parse_details,meta={'item':item},dont_filter=False)
+			yield Request(novelurl,self.parse_details,meta={'item':item},dont_filter=True)
 
 
 	def parse_details(self,response):
