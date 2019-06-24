@@ -18,9 +18,9 @@ class Myspider(scrapy.Spider):
 	def parse(self, response):
 		max_page=response.xpath('//*[@class="pagerdiv"]/ul/li[last()]/a/@href').extract_first()
 		max_page = max_page.split('/')[-1].split('.')[0]
-		print(max_page)
+		#print(max_page)
 		for page_num in range(1,int(max_page)+1):
-		#for page_num in range(1,5):
+		#for page_num in range(1,30):
 			new_url=self.shuku_url_base % str(page_num)
 			print(new_url)
 			#dont_filter 如果不加入这个参数， 那么第一页默认已经爬过了，在下一级函数，就不会再次获取其页面内容
@@ -49,8 +49,19 @@ class Myspider(scrapy.Spider):
 	def parse_details(self,response):
 		item = response.meta['item']
 		imgurl	=	response.xpath('//*[@id="fmimg"]/img/@src').extract_first()
-		imgurl	= imgurl if 'https' in imgurl else "https"+imgurl
+		if 'https' in imgurl or '' == imgurl:
+			imgurl	= imgurl 
+		else:
+			imgurl = "https:"+imgurl
+	
 
+		novelstatus = 	response.xpath('//*[@id="fmimg"]/span/@class').extract_first()
+		if novelstatus == 'b':
+			novelstatus = '完结'
+		elif novelstatus == None :
+			novelstatus = 'None'
+		else:
+			novelstatus = novelstatus+'需要继续'
 
 		simplyintroduce	=	response.xpath('//*[@id="intro"]/p[1]/text()').extract_first()
 		simplyintroduce = 	simplyintroduce.strip().replace('[收起]',"")
@@ -59,7 +70,6 @@ class Myspider(scrapy.Spider):
 		txtdownload = 	re.split('\'|\n',txtdownload)
 		txtdownload =	self.txt_base_url+txtdownload[5]+txtdownload[8]
 
-		novelstatus = 	'None'
 		downloadNum = 	'None'
 		novelsize	=	'None'
 		zipdownload	=	'None'
