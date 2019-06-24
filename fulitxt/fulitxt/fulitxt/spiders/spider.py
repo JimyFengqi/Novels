@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# @Date     : 2018-11-07 17:11:13
+# @Date     : 2019-06-24 10:11:13
 # @Author   : Jimy_Fengqi (jmps515@163.com)
 # @Link     : https://blog.csdn.net/qiqiyingse
 # @Version  : V1.0
@@ -17,10 +17,6 @@ class Myspider(scrapy.Spider):
 	main_url = "http://www.fltxt.com"
 	shuku_url_first_base='http://www.fltxt.com/%s/index.html'
 	shuku_url_base='http://www.fltxt.com/%s/index_%s.html'
-
-	downloadpage_url_base='https://www.xuanshu.com/txtxz/%s/down.html'
-	txt_base_url='https://txt.xuanshu.com/%s/%s.txt'
-	zip_base_url='https://zip.xuanshu.com/%s/%s.zip'
 
 
 	listtype={'xuanhuan':'玄幻魔法','chuanyue':'穿越重生','wuxia':'武侠修真','jsli':'军事历史','youxi':'网游竞技',
@@ -67,15 +63,16 @@ class Myspider(scrapy.Spider):
 			item['novelid']=novelid
 			item['novelurl']=novelurl
 			item['imgurl']=imgurl
-			#print(novelname,novelurl,imgurl,author)
+
 			yield Request(novelurl,self.parse_details,meta={'item':item},dont_filter=False)
-			
+
+
 	def parse_details(self,response):
 		item = response.meta['item']
 
 		contents 		= 		response.xpath('//*[@class="detail_right"]/ul/li/text()').extract()
-
-		downloadNum     =      	contents[1].split('：')[1]
+		downloadNum     =      	'http://www.fltxt.com'+response.xpath('//*[@class="detail_right"]/ul/li[2]/script/@src').extract_first()
+		downloadNum 	=		downloadNum.split('&addclick')[0] #这个页面的下载次数是动态加载的，需要获取这个脚本内容，拼接一个网址，然后访问提取
 		novelsize     	=      	contents[2].split('：')[1]
 		if 'KB' in novelsize:
 			novelsize	= 		float(re.split('KB',novelsize)[0])*1024
@@ -93,15 +90,19 @@ class Myspider(scrapy.Spider):
 		txtdownload		=		response.xpath('//*[@class="showDown"]/ul/li[1]/a/@href').extract_first()
 		zipdownload		=		'None'
 
-		item['author']=author
-		item['downloadNum']=downloadNum
-		item['novelstatus']=novelstatus
-		item['novelsize']=novelsize
-		item['txtdownload']=txtdownload
-		item['zipdownload']=zipdownload
-		item['simplyintroduce']=simplyintroduce
-		
+		item['author'] 			=	author
+		item['downloadNum']		=	downloadNum
+		item['novelstatus']		=	novelstatus
+		item['novelsize']		=	novelsize
+		item['txtdownload']		=	txtdownload
+		item['zipdownload']		=	zipdownload
+		item['simplyintroduce']	=	simplyintroduce
+
+		yield Request(downloadNum,self.get_downloadNum,meta={'item':item},dont_filter=True)
+
+	def get_downloadNum(self,response):
+		a= response.xpath('/html/body/p/text()').extract_first()
+		downloadNum = re.findall('\d+',a)[0]
+		item = response.meta['item']
+		item['downloadNum']		=	downloadNum
 		yield(item)
-
-
-	
