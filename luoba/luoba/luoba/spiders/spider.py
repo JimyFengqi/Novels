@@ -66,6 +66,8 @@ class Myspider(scrapy.Spider):
 			zipdownload	=	self.zip_base_url % (novelid)
 
 			imgurl 		= 	content.xpath('a[1]/img[1]/@src').extract_first()
+			imgurl 		=   imgurl if 'http' in imgurl else 'http://www.txt81.com' + imgurl
+
 			simplyintroduce=content.xpath('p[2]/text()').extract_first().strip()
 
 			item['novelname']=novelname

@@ -28,6 +28,7 @@ class DbManager(object):
             "novelid" text NOT NULL, 
             "noveltype" text NOT NULL, 
             "novelsize" text NOT NULL, 
+            "novelstatus" text NOT NULL, 
             "downloadnum" text NOT NULL, 
             "novelurl" text NOT NULL, 
             "imgurl" text NOT NULL,
