@@ -27,7 +27,7 @@ NEWSPIDER_MODULE = 'bookben.spiders'
 #USER_AGENT = 'bookben (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
