@@ -63,6 +63,8 @@ class Myspider(scrapy.Spider):
 			novelname   =   content.xpath('dd[1]/a/@title').extract_first()
 			novelurl  	=   self.main_url+content.xpath('dd[1]/a/@href').extract_first()
 			imgurl  	=   content.xpath('dd[1]/a/img/@src').extract_first()
+			imgurl		=   imgurl if 'https'  in imgurl else 'https://www.bookben.net'+imgurl
+
 			author  	=   content.xpath('dd[3]/text()').extract_first()
 			author 		=	author.split('：')[-1]
 			
@@ -82,7 +84,7 @@ class Myspider(scrapy.Spider):
 		item = response.meta['item']
 	
 		novelstatus 	= 	response.xpath('//*[@class="yxjj"]/dd[3]/text()').extract_first()
-
+		novelstatus		= 	novelstatus if '完结' not in novelstatus else '完结'
 		downloadNum     =   'None'
 
 		novelsize     	=   response.xpath('//*[@class="yxjj"]/dd[4]/text()').extract_first()
