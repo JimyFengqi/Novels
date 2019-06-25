@@ -1,8 +1,8 @@
 # novel网站
 | 网站        | 代码地址         | 其他  |
 | ------------- |:-------------:| -----:|
-|[爱去小说网](https://www.27xs.cc/)  |[下载代码](https://github.com/JimyFengqi/Novels/tree/master/aiqu/aiqu/aiqu)  | 
-|[书本网](https://www.bookben.net/txt.html)	|[下载代码](https://github.com/JimyFengqi/Novels/tree/master/bookben/bookben/bookben)| 
+|[爱去小说网](https://www.27xs.cc/)  |[下载代码](https://github.com/JimyFengqi/Novels/tree/master/aiqu/aiqu/aiqu)  | 没有下载数量，某些没有图片，某些没有简介 
+|[书本网](https://www.bookben.net/txt.html)	|[下载代码](https://github.com/JimyFengqi/Novels/tree/master/bookben/bookben/bookben)|    这个网站没有zip下载方法,同时也没有下载数量,  文件大小以文字数量来代替  
 |[落吧书屋](http://www.txt81.com/shu/)	|[下载代码](https://github.com/JimyFengqi/Novels/tree/master/luoba/luoba/luoba)  | 
 |[书丫丫](https://www.shuyaya.cc/quanben/)	|[下载代码](https://github.com/JimyFengqi/Novels/tree/master/shuyaya/shuyaya/shuyaya)   |  
 |[八零电子书](https://www.80txt.com/sort/4500.html)		|	[下载代码](https://github.com/JimyFengqi/Novels/tree/master/txt80/txt80)  |  
@@ -17,7 +17,7 @@
 |[Txt小说下载网](https://www.xsjtxt.com/soft/1/Soft_001_1.html)  |[下载代码](https://github.com/JimyFengqi/Novels/tree/master/sjtxt/sjtxt/sjtxt)  |  
 |[当书网](https://www.downbook.net/TXT/list4_1.html) |[下载代码](https://github.com/JimyFengqi/Novels/tree/master/dangshuwang/dangshuwang/dangshuwang)  |    
 |[飘柔文学](https://www.prwx.com/)   |[下载代码](https://github.com/JimyFengqi/Novels/tree/master/piaorouwenxue/piaorouwenxue/piaorouwenxue)  |    
-|[良久小说](https://www.txt909.com/full/1.html)  |[下载代码](https://github.com/JimyFengqi/Novels/tree/master/piaorouwenxue/piaorouwenxue/piaorouwenxue)  |    这个网站每种小说只显示50页 
+|[良久小说](https://www.txt909.com/full/1.html)  |[下载代码](https://github.com/JimyFengqi/Novels/tree/master/piaorouwenxue/piaorouwenxue/piaorouwenxue)  |    这个网站每种小说只显示10页,每页50个，没有zip下载方法  
 |[我爱读电子书](https://www.woaidu.org/)  |无|这个网站不提供下载方法，不过书籍信息挺全 
 |[时光电子书](https://www.60book.com/)  |无|这个网站不提供下载方法，不过书籍信息挺全 
 |[下书网](https://www.xiashutxt.com/type/nan_0_2_allvisit_1.html)  |无|这个网站不提供下载方法，网页也比较low，书籍总数253074本 
