@@ -16,7 +16,8 @@
 |[福利小说网](http://www.fltxt.com/xuanhuan/)  |[下载代码](https://github.com/JimyFengqi/Novels/tree/master/fulitxt/fulitxt/fulitxt)  |  
 |[Txt小说下载网](https://www.xsjtxt.com/soft/1/Soft_001_1.html)  |[下载代码](https://github.com/JimyFengqi/Novels/tree/master/sjtxt/sjtxt/sjtxt)  |  
 
-[当书网](https://www.downbook.net/TXT/list4_1.html) 
+|[当书网](https://www.downbook.net/TXT/list4_1.html) |[下载代码](https://github.com/JimyFengqi/Novels/tree/master/dangshuwang/dangshuwang/dangshuwang)  |   
+
 [飘柔文学](https://www.prwx.com/)  
 [乐文小说](https://www.365xs.la/type/)  
 [良久小说](https://www.txt909.com/full/1.html)  
@@ -46,3 +47,13 @@ REPLACE当发生UNIQUE约束冲突，先存在的，导致冲突的行在更改�
 
 为避免操作打断，我选择了IGNORE。最后完整的用法如下： 
 INSERT OR IGNORE INTO troopstypes (id)values(2); 
+
+## 常用的一些方法
+* 选择特定的内容
+   比如下面list内容， 只选择 class = b 的内容， xpath('class["b"]'); 
+   筛选含有class 的项目                         xpath('a[(@title)]/@id') #筛选出来含有title属性的，然后取其id
+```html
+  <div id="post-405" class="post-405 post type-post status">inner text</div>
+  <div id="post-105" class="b">inner text</div>
+  <div id="post-5" class="post-5 post type-post status">inner text</div>
+```    
