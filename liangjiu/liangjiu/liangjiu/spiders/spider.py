@@ -22,18 +22,25 @@ class Myspider(scrapy.Spider):
 		typecontent= response.xpath('//*[@class="subnav"]/ul/li')
 		for info in typecontent:
 			new_url   = self.main_url+info.xpath('a/@href').extract_first()
-		
 			yield Request(new_url,self.get_pagenum)
 
 	def get_pagenum(self,response):	
 
 		max_page=response.xpath('//*[@class="pager"]/ul/li[last()]/a/@href').extract_first()
-		max_page = '1' if None == max_page else max_page.split('/')[-1].split('.')[0].split('-')[0]
 
+		if None == max_page :
+			max_page = '1' 
+		elif 'full' in max_page:
+			max_page = max_page.split('/')[-1].split('.')[0]
+		else:
+			max_page =  max_page.split('/')[-1].split('.')[0].split('-')[-1]
+
+
+		print(response.url,max_page,type(max_page))
 		for page_num in range(1,int(max_page)+1):
 		#for page_num in range(1,2):
 			new_url=  response.url[:-6] + str(page_num) + '.html'
-			print(new_url)
+			print(max_page,new_url)
 			#dont_filter 如果不加入这个参数， 那么第一页默认已经爬过了，在下一级函数，就不会再次获取其页面内容
 			yield Request(new_url,self.get_novel,dont_filter=True)
 	def get_novel(self,response):
