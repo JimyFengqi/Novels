@@ -15,18 +15,14 @@
 |[棉花糖](https://www.mianhuatang2.com/lx/9/11.htm)  |[下载代码](https://github.com/JimyFengqi/Novels/tree/master/mianhuatang/mianhuatang/mianhuatang)  |  
 |[福利小说网](http://www.fltxt.com/xuanhuan/)  |[下载代码](https://github.com/JimyFengqi/Novels/tree/master/fulitxt/fulitxt/fulitxt)  |  
 |[Txt小说下载网](https://www.xsjtxt.com/soft/1/Soft_001_1.html)  |[下载代码](https://github.com/JimyFengqi/Novels/tree/master/sjtxt/sjtxt/sjtxt)  |  
-
-|[当书网](https://www.downbook.net/TXT/list4_1.html) |[下载代码](https://github.com/JimyFengqi/Novels/tree/master/dangshuwang/dangshuwang/dangshuwang)  |   
-
-[飘柔文学](https://www.prwx.com/)  
-[乐文小说](https://www.365xs.la/type/)  
-[良久小说](https://www.txt909.com/full/1.html)  
-
-[我爱读](https://www.woaidu.org/)  
-[下书网](https://www.xiashutxt.com/type/nan_0_2_allvisit_1.html)  
-[言情小说书库](http://www.fmxxs.com/)  
-[请看小说网](https://www.qk6.org/shuku/0_0_0_0_2_0_0_0_1.html)  
-[时光电子书](https://www.60book.com/)  
+|[当书网](https://www.downbook.net/TXT/list4_1.html) |[下载代码](https://github.com/JimyFengqi/Novels/tree/master/dangshuwang/dangshuwang/dangshuwang)  |    
+|[飘柔文学](https://www.prwx.com/)   |[下载代码](https://github.com/JimyFengqi/Novels/tree/master/piaorouwenxue/piaorouwenxue/piaorouwenxue)  |    
+|[良久小说](https://www.txt909.com/full/1.html)  |[下载代码](https://github.com/JimyFengqi/Novels/tree/master/piaorouwenxue/piaorouwenxue/piaorouwenxue)  |    这个网站每种小说只显示50页 
+|[我爱读电子书](https://www.woaidu.org/)  |无|这个网站不提供下载方法，不过书籍信息挺全 
+|[时光电子书](https://www.60book.com/)  |无|这个网站不提供下载方法，不过书籍信息挺全 
+|[下书网](https://www.xiashutxt.com/type/nan_0_2_allvisit_1.html)  |无|这个网站不提供下载方法，网页也比较low，书籍总数253074本 
+|[请看小说网](https://www.qk6.org/shuku/0_0_0_0_2_0_0_0_1.html)  |无| 这个网站书库中只能显示9页  请看小说网小说库共 344510 部作品
+ |[言情小说书库](http://www.fmxxs.com/)  |无|言情小说聚聚地，适合单本的找，没有书库，没法写下载代码   
  
 
 
