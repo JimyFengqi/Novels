@@ -11,12 +11,12 @@ import sqlite3,os
 
 class DbManager(object):
     def __init__(self):
-        self.dbname=os.path.dirname(os.path.dirname(os.path.dirname(os.getcwd())))+'/'+"wuxiandb.sqlite3"
-        #self.dbname=os.path.dirname(os.path.dirname(os.path.dirname(os.getcwd())))+'\\'+"wuxiandb.sqlite3"
+        self.dbname=os.path.dirname(os.path.dirname(os.path.dirname(os.getcwd())))+'/'+"piaorouwenxuedb.sqlite3"
+        #self.dbname=os.path.dirname(os.path.dirname(os.path.dirname(os.getcwd())))+'\\'+"piaorouwenxuedb.sqlite3"
         print(self.dbname)
         self.db = sqlite3.connect(self.dbname)
         self.cursor = self.db.cursor()
-        self.tablename= 'wuxian_novel'
+        self.tablename= 'piaorouwenxue_novel'
         self.initDB(self.tablename)
     def initDB(self,tablename):        
         if not os.path.exists(self.dbname) or os.path.getsize(self.dbname) < 10:
@@ -28,8 +28,8 @@ class DbManager(object):
             "novelid" text NOT NULL, 
             "noveltype" text NOT NULL, 
             "novelsize" text NOT NULL, 
-            "novelstatus" text NOT NULL, 
             "downloadnum" text NOT NULL, 
+            "novelstatus" text NOT NULL, 
             "novelurl" text NOT NULL, 
             "imgurl" text NOT NULL,
             "txtdownload" text NOT NULL, 
@@ -43,6 +43,6 @@ class DbManager(object):
             print('DB file not exist, create a new.')
 
 a=DbManager()
-name = 'wuxian'  
+name = 'piaorouwenxue'  
 cmd = 'scrapy crawl {0}'.format(name)  
 cmdline.execute(cmd.split())
