@@ -71,9 +71,10 @@ class Myspider(scrapy.Spider):
 		elif 'MB' in novelsize:
 			novelsize	= 		float(re.split('MB',novelsize)[0])*1024*1024
 		else:
-			novelsize	= 		novelsize
+			novelsize	= 		float(novelsize)
 
 		novelstatus 	= 		contents[4].split('：')[1]
+		novelstatus 	= 		novelstatus if '连载' in novelstatus else '完结'
 
 		author 			=		contents[5].split('：')[1]
 		author 			= 		'None'  if '' == author else author
@@ -103,6 +104,7 @@ class Myspider(scrapy.Spider):
 		item['txtdownload']		=	txtdownload
 		item['zipdownload']		=	zipdownload
 		item['simplyintroduce']	=	simplyintroduce
-		yield(item)
+		if novelsize > 50:
+			yield(item)
 
 
