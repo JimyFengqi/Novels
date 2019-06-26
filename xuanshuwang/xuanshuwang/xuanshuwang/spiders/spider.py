@@ -14,7 +14,7 @@ from xuanshuwang.items import XuanshuwangItem
 class Myspider(scrapy.Spider):
 	name = "xuanshuwang"
 	allowed_domains = ["xuanshu.com"]
-	main_url = "https://www.xuanshu.com/"
+	main_url = "https://www.xuanshu.com"
 	shuku_url_base='https://www.xuanshu.com/sort/%s.html'
 
 	downloadpage_url_base='https://www.xuanshu.com/txtxz/%s/down.html'
@@ -73,7 +73,7 @@ class Myspider(scrapy.Spider):
 			xswitem['imgurl']=imgurl
 			#print(novelname,novelurl,imgurl,author)
 
-			yield Request(novelurl,self.parse_details,meta={'xswitem':xswitem},dont_filter=True)
+			yield Request(novelurl,self.parse_details,meta={'xswitem':xswitem},dont_filter=False)
 
 	def parse_details(self,response):
 		xswitem = response.meta['xswitem']
@@ -91,6 +91,7 @@ class Myspider(scrapy.Spider):
 
 
 		novelstatus 	= 		contents[5].split('：')[1]
+		novelstatus		=       novelstatus if '全集'  not in  novelstatus else '完结'
 
 		simplyintroduce = 		response.xpath('//*[@class="showInfo"]').xpath('string(.)').extract()
 		simplyintroduce = simplyintroduce[0].strip()
@@ -116,6 +117,6 @@ class Myspider(scrapy.Spider):
 
 
 		#print(xswitem)
-		if novelsize > 20:
+		if novelsize > 4096:
 			yield xswitem
 		

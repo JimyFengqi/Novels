@@ -63,7 +63,7 @@ class Myspider(scrapy.Spider):
 			item = response.meta['item']
 			novelinfo = response.xpath('//*[@class="downInfoRowL"]')
 			imgurl = novelinfo.xpath('span/img/@src').extract_first()
-
+			imgurl = imgurl if 'https' in imgurl else self.main_url+imgurl
 			author 	= novelinfo.xpath('li[1]/a/text()').extract_first()
 			noveltype = novelinfo.xpath('li[2]/a/text()').extract_first()
 			novelsize = novelinfo.xpath('li[3]/text()').extract_first()

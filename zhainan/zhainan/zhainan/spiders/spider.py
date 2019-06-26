@@ -66,10 +66,11 @@ class Myspider(scrapy.Spider):
 				novelsize= novelsize
 
 			novelstatus = novelinfo[2]
+			novelstatus = '完结' if '完结'  in novelstatus else novelstatus
 
 			simplyintroduce=content.xpath('div[2]/p[2]/text()').extract_first()
 			simplyintroduce = simplyintroduce.strip().replace('文案',"")
-
+			simplyintroduce = simplyintroduce[1:] if '：' == simplyintroduce[0] else simplyintroduce
 
 			txtdownload	=	self.txt_base_url % (novelname)
 			zipdownload	=	self.zip_base_url % (novelname)
@@ -90,6 +91,6 @@ class Myspider(scrapy.Spider):
 			item['simplyintroduce']	=	simplyintroduce
 			
 
-			if novelsize > 10:
+			if novelsize > 4096:
 				yield item
 			

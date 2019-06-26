@@ -1,31 +1,29 @@
 # novel网站
 | 网站        | 代码地址         | 其他  |
 | ------------- |:-------------:| -----:|
-|[爱去小说网](https://www.27xs.cc/)  |[下载代码](https://github.com/JimyFengqi/Novels/tree/master/aiqu/aiqu/aiqu)  | 没有下载数量，某些没有图片，某些没有简介 
-|[书本网](https://www.bookben.net/txt.html)	|[下载代码](https://github.com/JimyFengqi/Novels/tree/master/bookben/bookben/bookben)|    这个网站没有zip下载方法,同时也没有下载数量,  文件大小以文字数量来代替  
-|[落吧书屋](http://www.txt81.com/shu/)	|[下载代码](https://github.com/JimyFengqi/Novels/tree/master/luoba/luoba/luoba)  | 
+|[爱去小说网](https://www.27xs.cc/)  |[下载代码](https://github.com/JimyFengqi/Novels/tree/master/aiqu/aiqu/aiqu)  | 没有下载数量，某些没有图片，某些没有简介，有zip 和 txt 两种下载方法  
+|[书本网](https://www.bookben.net/txt.html)	|[下载代码](https://github.com/JimyFengqi/Novels/tree/master/bookben/bookben/bookben)|  没有下载数量,  文件大小以文字数量来代替 ，小说有7W+ 部，没有zip下载  
+|[当书网](https://www.downbook.net/TXT/list4_1.html) |[下载代码](https://github.com/JimyFengqi/Novels/tree/master/dangshuwang/dangshuwang/dangshuwang)  |  没有下载数量，没有zip下载方法  
+|[落吧书屋](http://www.txt81.com/shu/)	|[下载代码](https://github.com/JimyFengqi/Novels/tree/master/luoba/luoba/luoba)  | 除了没有小说状态，其他数据都不错，言情小说偏多 
 |[书丫丫](https://www.shuyaya.cc/quanben/)	|[下载代码](https://github.com/JimyFengqi/Novels/tree/master/shuyaya/shuyaya/shuyaya)   |  
-|[八零电子书](https://www.80txt.com/sort/4500.html)		|	[下载代码](https://github.com/JimyFengqi/Novels/tree/master/txt80/txt80)  |  
-|[无限小说](http://www.555x.org/shuku.html)		|	[下载代码](https://github.com/JimyFengqi/Novels/tree/master/wuxian/wuxian/wuxian)  |  
-|[炫书网书库](https://www.xuanquge.com/shuku.html)			|[下载代码](https://github.com/JimyFengqi/Novels/tree/master/xuanshuwang/xuanshuwang/xuanshuwang)  |  
-|[选书网](https://www.xuanshu.com/soft/sort01/index_303.html)			|[下载代码](https://github.com/JimyFengqi/Novels/tree/master/xuanshuwang/xuanshuwang)  |  
-|[爪机网](https://www.zhuaji.org/shuku/)			|[下载代码](https://github.com/JimyFengqi/Novels/tree/master/zhuajishuwu/zhuajishuwu/zhuajishuwu)  |  
-|[奇书网](http://www.qishu.cc/yanqing/list10_1.html) |[下载代码](https://github.com/JimyFengqi/Novels/tree/master/qishuwang/qishuwang/qishuwang)  |  
-|[宅男小说网](http://www.zntxt.com/shuku/)  |[下载代码](https://github.com/JimyFengqi/Novels/tree/master/zhainan/zhainan/zhainan)  |  
-|[棉花糖](https://www.mianhuatang2.com/lx/9/11.htm)  |[下载代码](https://github.com/JimyFengqi/Novels/tree/master/mianhuatang/mianhuatang/mianhuatang)  |  
-|[福利小说网](http://www.fltxt.com/xuanhuan/)  |[下载代码](https://github.com/JimyFengqi/Novels/tree/master/fulitxt/fulitxt/fulitxt)  |  
-|[Txt小说下载网](https://www.xsjtxt.com/soft/1/Soft_001_1.html)  |[下载代码](https://github.com/JimyFengqi/Novels/tree/master/sjtxt/sjtxt/sjtxt)  |  
-|[当书网](https://www.downbook.net/TXT/list4_1.html) |[下载代码](https://github.com/JimyFengqi/Novels/tree/master/dangshuwang/dangshuwang/dangshuwang)  |    
-|[飘柔文学](https://www.prwx.com/)   |[下载代码](https://github.com/JimyFengqi/Novels/tree/master/piaorouwenxue/piaorouwenxue/piaorouwenxue)  |    
+|[八零电子书](https://www.80txt.com/sort/4500.html)		|	[下载代码](https://github.com/JimyFengqi/Novels/tree/master/txt80/txt80)  | 分类比较多有男生 女生小说之分，里面还有诗歌之类的， 可以参照无限小说网  
+|[无限小说](http://www.555x.org/shuku.html) |	[下载代码](https://github.com/JimyFengqi/Novels/tree/master/wuxian/wuxian/wuxian)  | 除了没有小说状态，其他数据都不错，言情小说偏多  
+|[炫书网书库](https://www.xuanquge.com/shuku.html) |[下载代码](https://github.com/JimyFengqi/Novels/tree/master/xuanshuwang/xuanshuwang/xuanshuwang)  |   除了没有小说状态，其他数据都不错，言情小说偏多  
+|[选书网](https://www.xuanshu.com/soft/sort01/index_303.html)			|[下载代码](https://github.com/JimyFengqi/Novels/tree/master/xuanshuwang/xuanshuwang)  |  小说状态 
+|[奇书网](http://www.qishu.cc/yanqing/list10_1.html) |[下载代码](https://github.com/JimyFengqi/Novels/tree/master/qishuwang/qishuwang/qishuwang) |奇书网没有小说状态，没有图片   
+|[宅男小说网](http://www.zntxt.com/shuku/)  |[下载代码](https://github.com/JimyFengqi/Novels/tree/master/zhainan/zhainan/zhainan)  |  信息比较全 
+|[棉花糖](https://www.mianhuatang2.com/lx/9/11.htm)  |[下载代码](https://github.com/JimyFengqi/Novels/tree/master/mianhuatang/mianhuatang/mianhuatang)  |  网站没有小说下载数量，没有书籍大小，没有zip下载方法   
+|[手机小说下载网](https://www.xsjtxt.com/soft/1/Soft_001_1.html)  |[下载代码](https://github.com/JimyFengqi/Novels/tree/master/sjtxt/sjtxt/sjtxt)  |部分小说没有TXT下载格式，其他数据都挺全   
+|[飘柔文学](https://www.prwx.com/)   |[下载代码](https://github.com/JimyFengqi/Novels/tree/master/piaorouwenxue/piaorouwenxue/piaorouwenxue)  |    下载数量是假的数据，没有zip方法，文件大小是通过字数多少计算的   
 |[良久小说](https://www.txt909.com/full/1.html)  |[下载代码](https://github.com/JimyFengqi/Novels/tree/master/piaorouwenxue/piaorouwenxue/piaorouwenxue)  |    这个网站每种小说只显示10页,每页50个，没有zip下载方法  
+|[请看小说网](https://www.qk6.org/shuku/0_0_0_0_2_0_0_0_1.html)  |无| 这个网站书库中只能显示9页  有下载方法，请看小说网小说库共 344510 部作品
+|[下书网](https://www.xiashutxt.com/type/nan_0_2_allvisit_1.html)  |无|这个网站不提供下载方法，网页也比较low，书籍总数253074本 
+|[福利小说网](http://www.fltxt.com/xuanhuan/)  |[下载代码](https://github.com/JimyFengqi/Novels/tree/master/fulitxt/fulitxt/fulitxt)  |  网站有小说下载数量，没有zip下载方法，库存不到1W  
+|[爪机网](https://www.zhuaji.org/shuku/)	|[下载代码](https://github.com/JimyFengqi/Novels/tree/master/zhuajishuwu/zhuajishuwu/zhuajishuwu)  |  没有任何下载方法，只能参考一下  
 |[我爱读电子书](https://www.woaidu.org/)  |无|这个网站不提供下载方法，不过书籍信息挺全 
 |[时光电子书](https://www.60book.com/)  |无|这个网站不提供下载方法，不过书籍信息挺全 
-|[下书网](https://www.xiashutxt.com/type/nan_0_2_allvisit_1.html)  |无|这个网站不提供下载方法，网页也比较low，书籍总数253074本 
-|[请看小说网](https://www.qk6.org/shuku/0_0_0_0_2_0_0_0_1.html)  |无| 这个网站书库中只能显示9页  请看小说网小说库共 344510 部作品
- |[言情小说书库](http://www.fmxxs.com/)  |无|言情小说聚聚地，适合单本的找，没有书库，没法写下载代码   
+|[言情小说书库](http://www.fmxxs.com/)  |无|言情小说聚聚地，适合单本的找，没有书库，没法写下载代码   
  
-
-
 
 
 

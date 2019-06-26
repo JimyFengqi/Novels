@@ -54,7 +54,9 @@ class Myspider(scrapy.Spider):
 		print('当前页面包含%d 个小说 %s'  % (len(novel_contents), response.url))
 		for content in novel_contents:
 			item					=	DangshuwangItem()
-			imgurl  				=	self.main_url  + content.xpath('a/img/@src').extract_first()	
+			imgurl  				=	content.xpath('a/img/@src').extract_first()	
+			imgurl   				=   imgurl if 'http' in imgurl else self.main_url  + imgurl
+
 			novelname   			=   content.xpath('a/img/@alt').extract_first()			
 			novelurl 				= 	self.main_url  +	content.xpath('a/@href').extract_first()
 			novelid 				= 	novelurl.split('/')[-1].split('.')[0].split('_')[-1]

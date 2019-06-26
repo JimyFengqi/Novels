@@ -35,12 +35,14 @@ class Myspider(scrapy.Spider):
 
 			novelname = novel.xpath('a/text()').extract_first()
 			novelurl = novel.xpath('a/@href').extract_first()
+			novelid  = novelurl.split('/')[-2]
 			author = novel.xpath('text()').extract_first()
 			author = author.split('/')[-1]
 
 			item=ShuyayaItem()
 			item['novelname']=novelname
 			item['author']=author
+			item['novelid']=novelid
 			item['novelurl']=novelurl
 
 			yield Request(novelurl,self.get_novel,dont_filter=True,meta={'item':item})
@@ -54,6 +56,8 @@ class Myspider(scrapy.Spider):
 		zipdownload	    = 	self.zip_base_url % (item['novelname'])
 		imgurl 			=   response.xpath('//*[@class="con_limg"]/img/@src').extract_first()
 		simplyintroduce =	response.xpath('//*[@class="r_cons"]/text()').extract_first()
+		simplyintroduce = simplyintroduce.replace('内容简介：','').strip()
+
 		noveltype 	= 	response.xpath('//*[@class="r420"]/p/span[2]/a/text()').extract_first()
 		novelsize 	= 	response.xpath('//*[@class="r420"]/p/span[4]/text()').extract_first()
 
@@ -65,13 +69,12 @@ class Myspider(scrapy.Spider):
 			novelsize= novelsize
 
 
-		item['downloadNum']=	'NULL'
+		item['downloadNum']=	'None'
 		item['imgurl']=imgurl
-		item['novelid']=	'NULL'
 		item['novelsize']=novelsize
 		item['novelstatus']=novelstatus
 		item['noveltype']=noveltype
-		item['txtdownload']='NULL'
+		item['txtdownload']='None'
 		item['zipdownload']=zipdownload
 		item['simplyintroduce']=simplyintroduce
 		if novelsize > 10:
